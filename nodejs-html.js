@@ -6,12 +6,12 @@ http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
 
   // Text to be written
-  res.write('Hello World!');
+  res.write('<h1>Hello World!</h1>');
 
   // End server
   res.end(""); 
 
-  // Any res.write() line here will be ignored because its placed after res.end()
-
+  // This line will be ignored because its placed after res.end()
+  res.write('Another line');
   
-}).listen(8080);
+}).listen(8080); // Port
