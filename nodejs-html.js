@@ -11,7 +11,6 @@ http.createServer(function (req, res) {
   // End server
   res.end(""); 
 
-  // This line will be ignored because its placed after res.end()
-  res.write('Another line');
+  // Any res.write() line here will be ignored because its placed after res.end()
   
 }).listen(8080); // Port
